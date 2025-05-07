@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: vpeinado <victor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:08:33 by vpeinado          #+#    #+#             */
-/*   Updated: 2023/07/17 20:44:43 by vpeinado         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:18:07 by vpeinado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@
 
 /* Keys */
 
-# define LEFT_KEY 123
-# define RIGHT_KEY 124
-# define DOWN_KEY 125
-# define UP_KEY 126
-# define ESC_KEY 53
-# define MOUSE_UP 4
-# define MOUSE_DOWN 5
-# define A_KEY 0
-# define S_KEY 1
+# define LEFT_KEY 65361    
+# define RIGHT_KEY 65363   
+# define DOWN_KEY 65364    
+# define UP_KEY 65362      
+# define ESC_KEY 65307     
+# define MOUSE_UP 4        
+# define MOUSE_DOWN 5      
+# define A_KEY 97          
+# define S_KEY 115         
 
 # include <stdio.h>
 # include <math.h> 

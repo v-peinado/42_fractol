@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+         #
+#    By: vpeinado <victor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 11:20:29 by vpeinado          #+#    #+#              #
-#    Updated: 2023/07/06 14:21:11 by vpeinado         ###   ########.fr        #
+#    Updated: 2025/05/07 11:08:27 by vpeinado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,13 @@ CC		= gcc
 CFLAGS	= -Werror -Wextra -Wall
 
 #Minilibx
-MLX_PATH	= minilibx/
+MLX_PATH	= minilibx-linux/
 MLX_NAME	= libmlx.a
 MLX			= $(MLX_PATH)$(MLX_NAME)
 
 #Includes
 INC			=	-I ./includes/\
-				-I ./minilibx/
+				-I ./minilibx-linux/
 
 #Sources
 SRC_PATH	=	src/
@@ -51,7 +51,7 @@ $(MLX):
 	@make -sC $(MLX_PATH)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(MLX) $(INC) -ldl -lmlx -framework OpenGL -framework AppKit -lz
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(MLX) $(INC) -L ${MLX_PATH} -lmlx -lXext -lX11 -lm -lbsd
 	@echo "\033[32mFract-ol: OK!"
 
 clean:
